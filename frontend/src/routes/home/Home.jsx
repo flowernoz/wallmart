@@ -5,7 +5,7 @@ import Holidays from "../../components/holidays/Holidays";
 import Category from "../../components/category/Category";
 import Clothes from "../../components/clothes/Clothes";
 import Brands from "../../components/brands/Brands";
-import img from "../../assets/Screen Shot 2023-11-27 at 7.38.13 PM.png";
+import img from "../../assets//Screen Shot 2023-11-27 at 7.38.13 PM.png";
 // import { products } from "../../static/products";
 import Products from "../../components/products/Products";
 import { useState } from "react";
