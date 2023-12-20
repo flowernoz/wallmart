@@ -1,0 +1,260 @@
+.single_pages {
+  max-width: 1366px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.single_path_container {
+  width: 100%;
+  height: 50px;
+  background: aqua;
+  padding: 0 2%;
+  display: flex;
+  align-items: center;
+}
+
+.single_container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 2%;
+  display: flex;
+}
+
+/* left */
+
+.single_left_img {
+  width: 65%;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+}
+
+.single_all_img_container {
+  width: 180px;
+  height: 100%;
+  overflow-y: auto;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.img_scroll_bar {
+  overflow-y: auto;
+  padding: 0 5px;
+}
+
+.img_scroll_bar::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+
+.single_all_img {
+  width: 80%;
+  height: 130px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 0 5px;
+}
+
+.single_all_img:hover {
+  border: 1px solid blue;
+  cursor: pointer;
+}
+
+.single_all_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  backdrop-filter: blur(2px);
+}
+
+/* single img center */
+
+.single_center_img_container {
+  width: calc(100% - 180px);
+  height: 90%;
+  padding: 30px 20px;
+  display: flex;
+}
+
+.single_center_img {
+  width: 90%;
+  height: 90%;
+  border: 1px solid #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.single_center_img:hover {
+  border: 1px solid #222;
+  border-radius: 10px;
+}
+
+.single_center_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* icons container */
+
+.single_center_img_icon_container {
+  width: calc(100% - 90%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.single_center_img_icon_container button {
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 3px #bab5b5;
+}
+
+.single_center_img_icon_container button svg {
+  font-size: 19px;
+}
+
+/* right */
+
+.single_right_all_title {
+  width: calc(100% - 65%);
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.single_right_all_title_header {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #bab5b5;
+  border-radius: 10px;
+}
+
+.single_right_all_title_header span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0c4f9a;
+}
+
+.single_right_title_container {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #bab5b5;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.single_title_border {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.single_title_border span {
+  border: 1px solid #0c4f9a;
+  color: #1d66b9;
+  font-size: 14px;
+  font-weight: 100;
+  padding: 4px 5px;
+}
+
+.single_title_border label {
+  font-size: 12px;
+  color: #74767c;
+  font-weight: 100;
+}
+
+.single_right_title_container a {
+  color: #222;
+  font-size: 16px;
+  text-decoration-line: underline;
+}
+
+.single_right_title_container a:hover {
+  text-decoration-color: #1d66b9;
+  color: #1d66b9;
+}
+
+.single_right_title_container h2 {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 10px;
+  color: #333;
+}
+
+.single_right_title_container b {
+  font-size: 22px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.single_right_title_container span {
+  font-size: 13px;
+  color: #555;
+}
+
+.single_right_title_container button {
+  padding: 13px 40px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #1d66b9;
+  color: #fff;
+  margin-top: 25px;
+}
+
+.single_right_title_container button:hover {
+  background: #0c4f9a;
+}
+.single_details {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  padding: 4%;
+}
+
+.single_details small {
+  width: 100%;
+  text-align: left;
+  font-size: 22px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-bottom: 1.5px solid rgb(108, 104, 104);
+  padding-bottom: 15px;
+  font-weight: 550;
+}
+
+.single_details ul {
+  list-style-position: inside;
+}
+
+.single_details p {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.single_details span {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.single_details ul li {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}

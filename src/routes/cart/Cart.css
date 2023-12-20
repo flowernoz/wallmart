@@ -1,0 +1,366 @@
+.cart_page {
+  width: 100%;
+  padding: 20px 2%;
+  /* background-color: pink; */
+}
+
+.cart_length {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.cart_length h2 {
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart_length h2 span {
+  font-size: 17px;
+  font-weight: 100;
+}
+
+.cart_container {
+  width: 100%;
+  max-height: 77vh;
+  /* background: blueviolet; */
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.cart_left_container {
+  width: 70%;
+  /* background: #eee; */
+  max-height: 100%;
+}
+
+.cart_left_scroll_container {
+  width: 100%;
+  max-height: 590px;
+  overflow-y: auto;
+}
+.cart_left_scroll_container::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+
+.cart_left_scroll_item {
+  width: 100%;
+  box-shadow: 0 0 3px #c4bcbc;
+  padding: 50px 20px;
+  margin: 5px 0;
+}
+
+/* buy car code */
+
+.cart_left_buy_car_container {
+  width: 100%;
+  padding: 20px 2%;
+  background: #f2f8fd;
+  display: flex;
+}
+
+.cart_buy_car_img_container {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  padding: 15px 0;
+}
+
+.cart_buy_car_img_container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.cart_left_buy_title_container {
+  width: calc(100% - 10%);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart_left_buy_title_container h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.cart_left_buy_title_container span {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.cart_left_buy_title_container a {
+  color: #333;
+  text-decoration-line: underline;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.cart_left_buy_title_container a:hover {
+  text-decoration: none;
+  color: #1d78de;
+}
+
+.cart_left_buy_title_container hr {
+  margin: 10px 0;
+}
+
+.cart_left_buy_car_title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart_left_buy_car_title a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart_left_buy_car_title a svg {
+  color: #333;
+  font-size: 19px;
+}
+
+.cart_left_buy_car_title a:hover {
+  text-decoration: none;
+  color: #1d78de;
+}
+
+/* cart item */
+
+.cart_left_scroll_item {
+  display: flex;
+  gap: 20px;
+}
+
+.cart_left_img_container {
+  width: 100px;
+  height: 70px;
+}
+
+.cart_left_img_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cart_left_title_container {
+  width: calc(100% - 100px);
+  display: flex;
+  align-items: center;
+}
+
+.cart_left_title_left_container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart_left_title_left_container h2 {
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: start;
+  font-weight: 100;
+}
+
+.cart_left_title_btn {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.cart_left_btn_container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart_left_btn_container span {
+  text-decoration-line: underline;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.cart_left_btn_container span:hover {
+  text-decoration: none;
+}
+
+.cart_btn_container {
+  background: #d6d9df;
+  border-radius: 20px;
+  border: 1px solid #333;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* shop now */
+
+.img_container {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img_container img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+/* total prices */
+
+.cart_rigth_container {
+  width: calc(100% - 70%);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  background: #fafbfb;
+}
+
+.cart_btn_container_items {
+  width: 100%;
+  padding: 0 20px;
+  border-bottom: 1px solid #c4bcbc;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.cart_btn_container_items button {
+  width: 100%;
+  padding: 10px 13px;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  background: #1571dc;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart_btn_container_items span {
+  font-size: 13px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.cart_btn_container_items span a {
+  text-decoration-line: underline;
+  color: #000000;
+}
+
+.cart_btn_container_items span a:hover {
+  color: #1571dc;
+  text-decoration: none;
+}
+
+.cart_total_pricec_container {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart_subtotal_container,
+.cart_sevings_container,
+.cart_shopping_container,
+.cart_taxes_container,
+.cart_estimated_total_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart_subtotal_container b,
+.cart_sevings_container b {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cart_subtotal_container b {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart_subtotal_container b span {
+  font-size: 14px;
+  font-weight: 200;
+  color: #000000;
+}
+
+.cart_subtotal_container s {
+  text-decoration-line: line-through;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000000;
+}
+
+.cart_shopping_container p {
+  font-size: 14px;
+  font-weight: 100;
+  color: #000000;
+}
+
+.cart_sevings_prices_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.cart_sevings_prices_container b {
+  padding: 4px 7px;
+  background: #e8fae1;
+}
+
+.cart_sevings_prices_container b,
+.cart_sevings_prices_container span {
+  color: #2a8704;
+}
+
+.cart_shopping_container span {
+  font-size: 14px;
+  font-weight: 100;
+  color: #2a8704;
+}
+
+.cart_taxes_container span {
+  font-size: 16px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.cart_estimated_total_container p {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.cart_estimated_total_container b {
+  color: #2a8704;
+}

@@ -1,0 +1,130 @@
+.Allproducts {
+  padding: 120px 40px 60px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  background: rgba(164, 160, 223, 0.923);
+}
+
+.Allproducts .cart__pro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+.Allproducts .cart__pro:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 25px rgba(26, 25, 25, 0.6);
+}
+.name {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  color: #ffffff;
+  background: #b8b8b8;
+  text-shadow: 1px 1px 1px #333;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.circle {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  transform: translate(-50%, 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editor {
+  position: absolute;
+  right: 40px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.editor:hover {
+  color: dodgerblue;
+  transform: scale(1.1);
+  box-shadow: 1px 4px 5px #fff;
+  border-radius: 50%;
+}
+.cart__pro {
+  width: 50%;
+}
+.cart__pro h4 {
+  justify-content: center;
+  display: flex;
+  gap: 5px;
+}
+.cart__pro h4 p {
+  font-size: 2em;
+  margin-top: 45px;
+  font-family: "Cookie", cursive;
+  color: rgb(6, 2, 70);
+}
+
+.delete {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: inherit;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  color: #fff;
+  background-blend-mode: multiply;
+  cursor: pointer;
+}
+
+.cart__pro ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+}
+.cart__pro ul li {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  color: rgb(50, 49, 49);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cart__pro li b {
+  font-weight: 400;
+  color: rgb(6, 2, 70);
+  font-style: normal;
+}
+
+.cart__pro li:last-of-type {
+  display: flex;
+  gap: 10px;
+}
+.updated {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 15px;
+  bottom: 3px;
+  font-size: 13px;
+  color: dodgerblue;
+  font-family: sans-serif;
+  font-style: italic;
+}

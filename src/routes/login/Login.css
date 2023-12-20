@@ -1,0 +1,82 @@
+.Signin {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+.signinForm button,
+.Signin h3,
+.Signin p,
+.Signin span,
+.Signin span a {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.Signin h3 {
+  margin: 25px 0 10px;
+  font-weight: 700;
+  color: black;
+}
+
+.Signin p {
+  color: #333;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.signinForm {
+  width: 330px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.signinForm label {
+  font-size: 13.6px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 0 0 7px 7px;
+}
+
+.signinForm input {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 50px;
+  border: 1.5px solid rgb(97, 94, 94);
+  border-radius: 4px;
+  text-indent: 15px;
+  font-size: 16px;
+}
+
+.signinForm .submit {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 40px;
+  background-color: #0071dc;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Signin span {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  line-height: 170%;
+  color: #333;
+  font-size: 15px;
+}
+.Signin span a {
+  color: #333;
+  font-weight: 200;
+  font-size: 15px;
+  text-decoration: underline;
+}

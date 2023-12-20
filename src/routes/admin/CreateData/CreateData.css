@@ -1,0 +1,79 @@
+.CreateData {
+  width: 100%;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.FormData {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.inputs {
+  width: 100%;
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.FormData button.submit {
+  width: 50%;
+  height: 40px;
+  margin: 25px auto;
+  background: rgba(255, 255, 255, 0.25);
+  line-height: 1em;
+  padding: 0.5em 0.5em;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  transition: all 0.25s;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.562);
+}
+.FormData .submit:hover,
+.FormData .submit:active {
+  background: #0071dc;
+  color: #fff;
+  outline: none;
+}
+.FormData textarea {
+  height: 80px !important;
+}
+
+.FormData textarea,
+.FormData select,
+.FormData input {
+  outline: none;
+  background: none;
+  border: none;
+  line-height: 1em;
+  font-weight: 300;
+  width: 300px;
+  height: 40px;
+  font-size: 18px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.562);
+  text-indent: 15px;
+}
+
+.CreateData h1 {
+  font-size: 3em;
+  margin: 0 0 0.7em 0;
+  text-align: center;
+  font-family: "Cookie", cursive;
+  color: rgb(6, 2, 70);
+}
+
+.text-center {
+  text-align: center;
+}
+select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  line-height: 9px;
+  padding: 0.11em 0.25em;
+}
+option {
+  width: 100%;
+}
