@@ -56,6 +56,7 @@ function CreateData() {
             type="text"
             onChange={(e) => setImages(e.target.value)}
             value={images}
+            className="images_create"
           />
           <textarea
             onChange={(e) => setDetails(e.target.value)}

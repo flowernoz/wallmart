@@ -16,16 +16,19 @@ user.get("/allusers", async (req, res) => {
 //create user
 user.post("/create", [userValidation], async (req, res) => {
   let newUser = req.body;
-  let exactuser = await userDb.findOne({ username: newUser.username });
+  let exactuser = await userDb.findOne({ email: newUser.email });
   if (exactuser) {
     return res.status(400).json({
+      success: false,
       msg: `${newUser.username} already exists`,
       innerData: null,
     });
   }
   let userone = await userDb.create(newUser);
   let savedUser = await userone.save();
-  res.status(201).json({ msg: "user is created ", innerData: savedUser });
+  res
+    .status(201)
+    .json({ success: true, msg: "user is created ", innerData: savedUser });
 });
 
 user.delete("/delete/:id", async (req, res) => {

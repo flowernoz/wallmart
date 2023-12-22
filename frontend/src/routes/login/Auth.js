@@ -1,12 +1,10 @@
 import React from "react";
-import { Outlet, Navigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 export const Auth = () => {
-  let userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
-  let auth =
-    userInfo?.username === "gulnoza" && userInfo?.password === "tursunova";
-  if (auth) return <Outlet />;
+  let role = JSON.parse(sessionStorage.getItem("registered"))?.role;
+  if (role) return <Outlet />;
   else {
-    return <Navigate to={"/login"} />;
+    return <Outlet />;
   }
 };

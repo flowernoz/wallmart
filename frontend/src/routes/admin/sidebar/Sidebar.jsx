@@ -6,12 +6,11 @@ import { FiLogOut } from "react-icons/fi";
 
 function Sidebar() {
   const navigate = useNavigate();
-
+  let name = JSON.parse(localStorage.getItem("registered"))?.firstname;
   const LogOut = () => {
-    localStorage.removeItem("admin");
+    localStorage.removeItem("registered");
     navigate("/");
   };
-  console.log(navigate);
 
   const admin = JSON.parse(localStorage.getItem("admin"));
 
@@ -19,13 +18,15 @@ function Sidebar() {
     <aside>
       <div className="aside__Logo">
         {/* logo */}
-        <div>
+        <div className="welcome">
           <Link to={"/admin"}>
             Welcome <br /> <span> {admin?.username}</span>{" "}
           </Link>
+          <p>{name}</p>
         </div>
       </div>
       <div className="aside__links">
+        <Link to={"/"}>Home</Link>
         <Link to={"/admin/create"}>Create</Link>
         <Link to={"/admin/alldata"}>Alldata</Link>
       </div>

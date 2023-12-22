@@ -1,10 +1,12 @@
 aside {
   width: 300px;
   min-height: 100vh;
-  background-color: #444;
-  color: #fff;
+  background-color: rgb(255, 255, 255);
+  color: #333;
   position: relative;
   overflow: hidden;
+  /* border-right: 1px solid dodgerblue; */
+  box-shadow: 0 0 4px rgba(5, 69, 134, 0.613);
 }
 
 aside .aside__Logo {
@@ -12,12 +14,12 @@ aside .aside__Logo {
   display: flex;
   align-items: center;
   gap: 15px;
-  background-color: dodgerblue;
+  background-color: rgb(98, 171, 243);
   padding: 20px;
 }
 
 aside .aside__Logo h3 span {
-  color: #fff;
+  color: #333;
 }
 
 aside .aside__Logo img {
@@ -38,7 +40,7 @@ aside .aside__links a {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  color: #fff;
+  color: #333;
   height: 35px;
   border-bottom: 1px solid #615f5f;
   transition: 0.3s;
@@ -51,14 +53,16 @@ aside .aside__links a::before {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 0px 0;
   background-color: dodgerblue;
   content: "";
   transition: 0.3s;
 }
 
 aside .aside__links a:hover {
-  background-color: #0e5fc949;
+  background-color: rgb(98, 171, 243);
+  color: #fff;
+  border-bottom: 3px solid dodgerblue;
 }
 
 aside .aside__links a:hover::before {
@@ -85,4 +89,20 @@ aside .aside__links a div {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+.welcome a {
+  color: #fff;
+  font-size: 22px;
+  font-family: monospace;
+}
+.welcome {
+  display: flex;
+  gap: 20px;
+}
+.welcome p {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 22px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }

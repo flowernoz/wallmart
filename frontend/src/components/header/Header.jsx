@@ -17,6 +17,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 
 function Header() {
+  let userdata = JSON.parse(localStorage.getItem("registered"))?.firstname;
   const [openSidebar, setOpenSidebar] = useState(false);
   const [openServ, setOpenServ] = useState(false);
   const [searchResult, setSearchResult] = useState(null);
@@ -114,10 +115,10 @@ function Header() {
             </div>
           </div>
 
-          <Link to={"/login"} className="sign">
+          <Link to={userdata ? "/admin" : "/login"} className="sign">
             <FaRegUser />
             <div className="sp">
-              <span>Sign In</span>
+              <span>{userdata ? userdata : "Sign In"}</span>
               <b>Account</b>
             </div>
           </Link>
@@ -133,11 +134,7 @@ function Header() {
       <div className="div"></div>
       <div className="header_bottom">
         <div className="head">
-          <select>
-            <option value="eng">Eng</option>
-            <option value="ru">Ru</option>
-            <option value="uz">Uz</option>
-          </select>
+          <button>How do you want your items?</button>
           <div className="hr"></div>
         </div>
 

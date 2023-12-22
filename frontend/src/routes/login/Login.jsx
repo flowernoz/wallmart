@@ -1,9 +1,8 @@
 import React from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../assets/logo.png";
 import axios from "axios";
-import { useState } from "react";
 function Login() {
   const navigate = useNavigate();
   function LOGIN(e) {
@@ -16,7 +15,14 @@ function Login() {
       .get(`http://localhost:5500/user/search?email=${email}`)
       .then((res) => {
         if (res.data.success == true) {
-          return navigate("/");
+          return (
+            console.log(res.data.innerData),
+            localStorage.setItem(
+              "registered",
+              JSON.stringify(res.data.innerData)
+            ),
+            navigate("/")
+          );
         } else {
           return navigate("/register");
         }
@@ -42,7 +48,7 @@ function Login() {
           autoComplete="disable"
           autoFocus
           required
-          type="text"
+          type="email"
         />
         <button className="submit" type="submit">
           Continue

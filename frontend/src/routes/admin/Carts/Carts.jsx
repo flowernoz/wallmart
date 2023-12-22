@@ -74,6 +74,7 @@ function Carts() {
     <Loader />
   ) : (
     <div className="Allproducts">
+      <p>All products</p>
       {openedit && (
         <Edit
           Api={Api}
@@ -97,21 +98,25 @@ function Carts() {
               {item.quantity}
             </div>
           </div>
+          <small className="category-cart"> {item.category}</small>
           <h4>
-            <p>{item.brand}</p>
-            <p>{item.price}</p>
+            <p>Brand: {item.brand}</p>
+            <b> Price: ${item.price}</b>
           </h4>
           <ul>
             <li>
-              <b>Job:</b> {item.description}
+              <b>Description:</b> {item.description}
             </li>
-            <li>
-              <b>Age:</b> {item.details[0]}
-            </li>
-            <li>
-              <b>Address: </b>
-              {item.images[0]}
-            </li>
+            <b>Details:</b>
+            {item.details?.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+            <b>Images: </b>
+            <div className="pro-imgs">
+              {item.images?.map((item, index) => (
+                <img src={item} key={index} alt={item.title} />
+              ))}
+            </div>
           </ul>
         </div>
       ))}

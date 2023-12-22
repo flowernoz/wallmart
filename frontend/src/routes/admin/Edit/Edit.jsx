@@ -12,11 +12,12 @@ function Edit({ setopenedit, userdata, userID, Api }) {
   //* SEND DATA FUNCTION //////////////////
   function senddata(e) {
     e.preventDefault();
-    console.log(editData);
 
     let formData = new FormData(e.target);
     let data = Object.fromEntries(formData);
     data.quantity = 0;
+    data.images = editData.images;
+    data.details = editData.details;
     axios
       .put(`http://localhost:5500/product/update/${editData._id}`, data)
       .then((res) => {
@@ -34,7 +35,7 @@ function Edit({ setopenedit, userdata, userID, Api }) {
       })
       .catch((err) => console.log(err));
   }
-
+  console.log(editData.details);
   //*CLOSE FUNCTION /////////////////////
   function closeFunc() {
     document.body.setAttribute("style", "overflow:scroll");
@@ -48,7 +49,6 @@ function Edit({ setopenedit, userdata, userID, Api }) {
 
   return (
     <div className="Edit">
-      <div onClick={closeFunc} className="overlay"></div>
       <div className="container">
         <div onClick={closeFunc} className="closeButton">
           <MdClose className="closeEdit" />
@@ -97,20 +97,28 @@ function Edit({ setopenedit, userdata, userID, Api }) {
           </label>
           <label>
             <span className="label-text">Details</span>
-            <input
+            <textarea
               value={editData.details}
+              onChange={(e) => setEditData(e.target.value)}
+              required
+            >
+              {editData.details}
+            </textarea>
+            {/* <input
+              value={editData.details}
+              onChange={(e) => setEditData(e.target.value)}
               required
               type="text"
-              onChange={(e) => setEditData(e.target.value)}
-            />
+            /> */}
           </label>
           <label>
             <span className="label-text">Images</span>
             <input
-              value={editData.images[0]}
+              value={editData.images}
               onChange={(e) => setEditData(e.target.value)}
               required
               type="text"
+              className="edit_image"
             />
           </label>
           <label>

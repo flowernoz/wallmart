@@ -1,12 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 import logo from "../../assets/logo.png";
 import { useState } from "react";
+import axios from "axios";
 
 function Register() {
   const [showpassword, setshowpassword] = useState(false);
   let email = JSON.parse(localStorage.getItem("email"))?.email;
+  const navigate = useNavigate();
+  function register(e) {
+    e.preventDefault();
+    let formData = new FormData(e.target);
+    let value = Object.fromEntries(formData);
+    value.email = email;
+    axios
+      .post("http://localhost:5500/user/create", value)
+      .then((res) => {
+        if (res.data.success == true) {
+          return (
+            localStorage.setItem("registered", JSON.stringify(value)),
+            navigate("/")
+          );
+        } else {
+          return console.log("an error occured");
+        }
+      })
+      .catch((res) => console.log(res));
+  }
   return (
     <div className="Register">
       <Link to={"/"}>
@@ -18,7 +39,7 @@ function Register() {
         <Link to={"/login"}>Change</Link>{" "}
       </p>
 
-      <form className="signinForm registerForm">
+      <form className="signinForm registerForm" onSubmit={register}>
         <label>First name</label>
         <input name="firstname" autoFocus required type="text" />
         <label>Last name</label>

@@ -6,15 +6,6 @@ const userSchema = new Schema({
   lastname: {
     type: String,
   },
-  age: {
-    type: Number,
-  },
-  gender: {
-    type: String,
-  },
-  username: {
-    type: String,
-  },
   password: {
     type: String,
   },
@@ -24,11 +15,9 @@ const userSchema = new Schema({
   phone: {
     type: Number,
   },
-  address: {
-    type: String,
-  },
   role: {
     type: String,
+    default: "user",
   },
   addedTime: {
     type: String,

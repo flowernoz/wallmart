@@ -1,16 +1,14 @@
 import React from "react";
 import Carts from "./Carts/Carts";
 import CreateData from "./CreateData/CreateData";
-// import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Sidebar from "./sidebar/Sidebar";
-
+import "./Admin.css";
 function Admin() {
   return (
-    <div>
+    <div className="Admin">
       <Sidebar />
-      {/* <Outlet /> */}
-      <CreateData />
-      <Carts />
+      <Outlet />
     </div>
   );
 }

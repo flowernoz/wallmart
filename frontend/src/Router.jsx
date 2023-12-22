@@ -27,7 +27,10 @@ function Router() {
         <Route path="register" element={<Register />} />
 
         <Route path="/admin" element={<Auth />}>
-          <Route path="/admin" element={<Admin />}></Route>
+          <Route path="/admin" element={<Admin />}>
+            <Route path="/admin/create" element={<CreateData />} />
+            <Route path="/admin/alldata" element={<Carts />} />
+          </Route>
         </Route>
         <Route path="/admin/create" element={<CreateData />} />
         <Route path="/admin/alldata" element={<Carts />} />

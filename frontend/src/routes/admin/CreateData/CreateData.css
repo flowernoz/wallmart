@@ -1,13 +1,17 @@
 .CreateData {
-  width: 100%;
-  padding: 40px;
+  width: calc(100% - 300px);
+  height: 100vh;
   align-items: center;
   justify-content: center;
+  padding: 50px;
+  overflow-y: auto;
 }
 .FormData {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 .inputs {
@@ -18,7 +22,7 @@
   margin: 0 auto;
 }
 .FormData button.submit {
-  width: 50%;
+  width: 300px;
   height: 40px;
   margin: 25px auto;
   background: rgba(255, 255, 255, 0.25);
@@ -48,7 +52,7 @@
   border: none;
   line-height: 1em;
   font-weight: 300;
-  width: 300px;
+  width: 400px;
   height: 40px;
   font-size: 18px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.562);
@@ -74,6 +78,15 @@ select {
   line-height: 9px;
   padding: 0.11em 0.25em;
 }
+
 option {
   width: 100%;
+}
+
+input.images_create {
+  height: 100px !important;
+}
+
+.inputs textarea {
+  height: 200px;
 }
