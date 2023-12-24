@@ -10,53 +10,138 @@
 
 .deals {
   background: dodgerblue;
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  padding: 20px 20px;
+  align-items: start;
+}
+.deals span {
+  font-size: 22px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
 }
 
+.deals button {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.item1 {
+  background-image: url(./../../assets/banner/bannerImg1.jpg);
+}
 .item1,
 .item3 {
   grid-column: span 2;
   grid-row: span 8;
+  color: #333;
 }
 
+.item1 button,
+.item3 button {
+  color: #333;
+}
+.item3 {
+  background-image: url(../../assets/banner/bannerImg3.jpg);
+}
 .item2 {
   grid-column: span 4;
   grid-row: span 11;
+  background-image: url(../../assets/banner/bannerImg2.jpg);
+  background-position: top;
+  padding-top: 120px;
+}
+
+.item2 button {
+  text-decoration: none;
+  color: black;
+  padding: 15px 25px;
+  background: #fff;
+  border-radius: 30px;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+.item2 button:hover {
+  border: 2px solid black;
+}
+.item2 img {
+  object-position: top;
 }
 
 .item4 {
   grid-column: span 2;
   grid-row: span 12;
+  background-image: url(../../assets/banner/bannerImg4.jpg);
 }
 
 .item5 {
   grid-column: span 2;
   grid-row: span 6;
+  background-image: url(../../assets/banner/bannerImg7.jpg);
+}
+.item6 {
+  background-image: url(../../assets/banner/bannerImg5.jpg);
+}
+.item7 {
+  background-image: url(../../assets/banner/bannerImg6.jpg);
+  background-position: bottom;
+  padding-right: 90px;
 }
 
 .item6,
 .item7 {
   grid-column: span 2;
   grid-row: span 9;
+  color: rgba(12, 7, 32, 0.841);
+}
+
+.item6 button,
+.item7 button {
+  color: rgba(12, 7, 32, 0.819);
 }
 
 .item8 {
   grid-column: span 2;
   grid-row: span 12;
+  background-image: url(../../assets/banner/bannerImg10.jpg);
 }
 
 .item9 {
   grid-column: span 2;
   grid-row: span 6;
+  background-image: url(../../assets/banner/bannerImg8.jpg);
 }
 
 .item10 {
   grid-column: span 4;
   grid-row: span 6;
+  background-image: url(../../assets/banner/bannerImg9.jpg);
 }
 .deals img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  padding-right: 70px;
+}
+.item10 span {
+  color: #333;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.item10 span small {
+  font-size: 12px;
+}
+.item10 button {
+  color: #333;
 }

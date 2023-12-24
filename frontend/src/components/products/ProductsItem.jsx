@@ -8,7 +8,6 @@ function ProductsItem({ product }) {
   const cart = useSelector((s) => s.AddToCart);
   const dispatch = useDispatch();
   const [inc, setInc] = useState(false);
-
   function Add_To_Cart(product) {
     setInc(!inc);
     dispatch(AddToCart({ product }));
@@ -25,15 +24,14 @@ function ProductsItem({ product }) {
         </figure>
       </Link>
       <h4>
-        Now ${product?.price}{" "}
-        <strike>${Math.floor(product.price + (product.price % 10))}</strike>{" "}
+        Now ${product?.price}
+        <strike>${Math.floor(product.price + (product.price % 10))}</strike>
       </h4>
       <p>{product?.title}</p>
 
       <div className="products__cards__item__addCart">
         {!inc ? (
           <button onClick={() => Add_To_Cart(product)}>
-            {" "}
             <FaPlus /> Add
           </button>
         ) : (

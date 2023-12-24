@@ -19,7 +19,10 @@ function Register() {
       .then((res) => {
         if (res.data.success == true) {
           return (
-            localStorage.setItem("registered", JSON.stringify(value)),
+            localStorage.setItem(
+              "registered",
+              JSON.stringify(res.data.innerData)
+            ),
             navigate("/")
           );
         } else {

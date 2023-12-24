@@ -1,12 +1,13 @@
 aside {
   width: 300px;
-  min-height: 100vh;
+  max-height: 100vh;
+  height: 100%;
   background-color: rgb(255, 255, 255);
   color: #333;
   position: relative;
   overflow: hidden;
-  /* border-right: 1px solid dodgerblue; */
   box-shadow: 0 0 4px rgba(5, 69, 134, 0.613);
+  z-index: 100;
 }
 
 aside .aside__Logo {
@@ -42,7 +43,6 @@ aside .aside__links a {
   padding: 0 20px;
   color: #333;
   height: 35px;
-  border-bottom: 1px solid #615f5f;
   transition: 0.3s;
   position: relative;
 }
@@ -60,9 +60,7 @@ aside .aside__links a::before {
 }
 
 aside .aside__links a:hover {
-  background-color: rgb(98, 171, 243);
-  color: #fff;
-  border-bottom: 3px solid dodgerblue;
+  background-color: rgb(203, 227, 250);
 }
 
 aside .aside__links a:hover::before {

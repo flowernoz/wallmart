@@ -10,15 +10,15 @@ import axios from "axios";
 import { useEffect } from "react";
 
 const SinglePage = () => {
-  // let cartdata = useSelector((s) => s.AddToCart.map());
   let dispatch = useDispatch();
   let { id } = useParams();
   console.log(id);
   // const [imgIndex, setImgIndex] = useState(0);
   const [singleData, setSingleData] = useState("");
-
-  const cartData = useSelector((s) => s.AddToCart).map((i) => i.id);
-  let cartId = useSelector((s) => s.AddToCart).find((i) => i == id);
+  const cartData = useSelector((s) => s.addToCart)?.map((i) => i.id);
+  let cartId = useSelector((s) => s.addToCart)?.find(
+    (i) => i.id.toString() === id
+  );
   let quantity = cartId?.quantity;
   function addtocart() {
     dispatch(AddToCart({ product: singleData }));
@@ -74,14 +74,14 @@ const SinglePage = () => {
             <h2>{singleData?.title}</h2>
             <b>${singleData.price}</b>
             <span>Price when purchased online</span>
-            {singleData.quantity < 1 ? (
+            {quantity == 0 ? (
               <button onClick={() => addtocart(singleData)}>Add to cart</button>
             ) : (
               <button>
                 <FaMinus
                   onClick={() => dispatch(DecrementCart({ id: singleData.id }))}
                 />
-                <span>{quantity} added</span>
+                <span>{singleData.quantity} added</span>
                 <FaPlus
                   onClick={() => {
                     dispatch(AddToCart({ id: singleData.id }));

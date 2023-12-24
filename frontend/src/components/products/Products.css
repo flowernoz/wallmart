@@ -11,7 +11,9 @@
   justify-content: space-between;
   padding: 0 3%;
 }
-
+.products_nav a {
+  color: #333;
+}
 .products .products__cards {
   width: 100%;
   overflow-x: auto;

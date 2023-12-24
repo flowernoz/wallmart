@@ -1,7 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
 import { Link, useNavigate } from "react-router-dom";
-import { FaChevronRight } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 
 function Sidebar() {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import logo from "../img/walmartLogo.svg";
+import logo from "../../assets/walmartLogo.svg";
 import { CiGrid41 } from "react-icons/ci";
 import {
   HiOutlineViewGrid,
@@ -10,14 +10,13 @@ import {
 import { CiHeart } from "react-icons/ci";
 import { FaRegUser, FaCartArrowDown } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
-import { createSearchParams, Link, useNavigate } from "react-router-dom";
-import { products } from "../../static/products";
+import { Link } from "react-router-dom";
 import { departmentData } from "../../static/Departments";
 import { useSelector } from "react-redux";
 import axios from "axios";
-
 function Header() {
   let userdata = JSON.parse(localStorage.getItem("registered"))?.firstname;
+  let role = JSON.parse(localStorage.getItem("registered"))?.role;
   const [openSidebar, setOpenSidebar] = useState(false);
   const [openServ, setOpenServ] = useState(false);
   const [searchResult, setSearchResult] = useState(null);
@@ -115,7 +114,16 @@ function Header() {
             </div>
           </div>
 
-          <Link to={userdata ? "/admin" : "/login"} className="sign">
+          <Link
+            to={
+              role == "admin"
+                ? "/admin"
+                : role == "user"
+                ? "/account"
+                : "/login"
+            }
+            className="sign"
+          >
             <FaRegUser />
             <div className="sp">
               <span>{userdata ? userdata : "Sign In"}</span>
@@ -137,7 +145,6 @@ function Header() {
           <button>How do you want your items?</button>
           <div className="hr"></div>
         </div>
-
         <div className="header_bottom_links">
           <Link>Cyber Deals</Link>
           <Link>Grocery & Essentials</Link>

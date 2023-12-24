@@ -12,6 +12,7 @@ import CreateData from "./routes/admin/CreateData/CreateData";
 import Carts from "./routes/admin/Carts/Carts";
 import Register from "./routes/register/Register";
 import Main from "./Main";
+import Account from "./routes/admin/Account/Account";
 function Router() {
   return (
     <div>
@@ -23,8 +24,9 @@ function Router() {
           <Route path="/single-page/:id" element={<SinglePage />} />
         </Route>
 
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/account" element={<Account />} />
 
         <Route path="/admin" element={<Auth />}>
           <Route path="/admin" element={<Admin />}>

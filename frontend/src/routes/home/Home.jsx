@@ -24,8 +24,8 @@ function Home() {
   // products Data
   let blackFriday = products?.slice(0, 12);
   let season = products?.slice(13, 25);
-  let electronic = products?.filter((i) => i.category === "electronic");
-  let moreToLove = products?.filter((i) => i.category === "Grocery");
+  let electronic = products?.filter((i) => i.category === "fashion");
+  let moreToLove = products?.filter((i) => i.category === "Tires");
   let fashion = products?.filter((i) => i.category === "fashion");
 
   return (
